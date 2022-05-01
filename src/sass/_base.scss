@@ -22,27 +22,27 @@ a{
     text-decoration: none;
     color: unset;
 }
-@each $color, $val in $color {
+@each $color, $val in $colors {
     .color-#{$color}{
-        color: $vall
+        color: $val;
     }
     .bg-#{$color}{
         background-color: $val;
     }
 }
-@each $var in $numbers {
+@each $val in $numbers {
     .grid-col-#{$val}{
         grid-template-columns: repeat($val, 1fr);
     }
 }
-@each $var in $numbers {
+@each $val in $numbers {
     .grid-col-md-#{$val}{
         @include tablet{
             grid-template-columns: repeat($val, 1fr);
         }
     }
 }
-@each $var in $numbers {
+@each $val in $numbers {
     .grid-col-sm-#{$val}{
     @include tablet{
             grid-template-columns: repeat($val, 1fr);

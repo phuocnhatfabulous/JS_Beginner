@@ -2,17 +2,19 @@ import React from 'react'
 import {BrowserRouter, Route} from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
+import Routes from '../routes/App'
 
 const Layout = () => {
   return (
     <BrowserRouter>
-        <Router render={props => (
+        <Route render={props => (
             <div>
                 <div className='container'>
                     <Header {...props}/>
                     <div className='main'>
                         <Routes/>
                     </div>
+                    <Footer/>
                 </div>
             </div>
         )}/>
